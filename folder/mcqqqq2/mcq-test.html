@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCQ Test - Placement Preparation App</title>
+  <link rel="stylesheet" href="mcq-test-FINAL.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-container">
+        <div class="logo-clickable" id="logoHome">
+          <div class="logo">
+            <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo">
+          </div>
+          <span class="brand">Placement Preparation App</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="datetime-display">
+          <div class="time-display" id="currentTime">6:03 AM</div>
+          <div class="date-display">Oct 10, 2025</div>
+        </div>
+
+        <div class="motivational-stats">
+          <div class="stat-item">
+            <span class="active-dot"></span>
+            <span class="stat-text"><span id="activeUsers">1,267</span> currently studying</span>
+          </div>
+          <div class="stat-divider">•</div>
+          <div class="stat-item">
+            <span class="stat-text"><span id="studentsHelped">15,394</span> students helped</span>
+          </div>
+        </div>
+
+        <div class="options-container">
+          <button id="menuBtn" class="options-btn">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Options</span>
+          </button>
+          <div id="menuDropdown" class="options-dropdown">
+            <div class="dropdown-arrow"></div>
+            <ul class="dropdown-menu">
+              <li><a href="leaderboard.html" class="dropdown-item">🏆 Leaderboard</a></li>
+              <li><a href="profile.html" class="dropdown-item">👤 Profile</a></li>
+              <li><a href="mcq-test.html" class="dropdown-item active">📝 Test</a></li>
+              <li><a href="practice.html" class="dropdown-item">💪 Practice</a></li>
+              <li><a href="feedback.html" class="dropdown-item">💬 Feedback</a></li>
+              <li><a href="helpdesk.html" class="dropdown-item">🆘 Help Desk</a></li>
+              <li><a href="about.html" class="dropdown-item">ℹ️ About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="test-main">
+    <div class="container">
+
+      <!-- Pre-Test Screen -->
+      <section class="pre-test-screen" id="preTestScreen">
+        <div class="test-intro-card">
+          <div class="intro-header">
+            <div class="intro-icon">📝</div>
+            <h1 class="intro-title">MCQ Assessment Test</h1>
+            <p class="intro-subtitle">Coding & Aptitude Comprehensive Evaluation</p>
+          </div>
+
+          <div class="test-info">
+            <div class="info-grid">
+              <div class="info-item">
+                <div class="info-icon">⏱️</div>
+                <div class="info-content">
+                  <span class="info-label">Duration</span>
+                  <span class="info-value">25 minutes</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">❓</div>
+                <div class="info-content">
+                  <span class="info-label">Questions</span>
+                  <span class="info-value">15 MCQs</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">🎯</div>
+                <div class="info-content">
+                  <span class="info-label">Topics</span>
+                  <span class="info-value">Coding & Aptitude</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon">🏆</div>
+                <div class="info-content">
+                  <span class="info-label">Passing Score</span>
+                  <span class="info-value">70%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-instructions">
+            <h3 class="instructions-title">📋 Test Instructions</h3>
+            <ul class="instructions-list">
+              <li>🔍 Read each question carefully before selecting an answer</li>
+              <li>📊 Each question has 4 options with only 1 correct answer</li>
+              <li>✏️ You can review and change your answers before submitting</li>
+              <li>⏰ Timer will start once you begin the test</li>
+              <li>🤖 AI-powered feedback will analyze your weak points</li>
+              <li>📅 A tailored study plan with scheduled test will be provided</li>
+              <li>🎯 Focus areas will be identified based on your performance</li>
+            </ul>
+          </div>
+
+          <div class="start-test-section">
+            <button class="start-test-btn" id="startTestBtn">
+              <span class="btn-icon">🚀</span>
+              <span class="btn-text">Start Assessment</span>
+              <span class="btn-arrow">→</span>
+            </button>
+            <p class="start-note">Get ready to showcase your skills!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Test Screen -->
+      <section class="test-screen" id="testScreen">
+
+        <!-- Test Header -->
+        <div class="test-header">
+          <div class="test-progress">
+            <div class="progress-info">
+              <span class="question-counter">
+                Question <span id="currentQuestionNum">1</span> of <span id="totalQuestions">15</span>
+              </span>
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-timer">
+            <div class="timer-icon">⏰</div>
+            <div class="timer-display" id="timerDisplay">25:00</div>
+          </div>
+        </div>
+
+        <!-- Question Container -->
+        <div class="question-container" id="questionContainer">
+          <div class="question-card">
+            <div class="question-header">
+              <div class="question-type" id="questionType">Coding</div>
+              <div class="question-difficulty" id="questionDifficulty">Medium</div>
+            </div>
+
+            <div class="question-content">
+              <h2 class="question-text" id="questionText">Loading question...</h2>
+              <div class="question-code" id="questionCode" style="display: none;">
+                <!-- Code snippets will be shown here for coding questions -->
+              </div>
+            </div>
+
+            <div class="options-container" id="optionsContainer">
+              <!-- Options will be dynamically generated -->
+            </div>
+
+            <div class="question-explanation" id="questionExplanation" style="display: none;">
+              <!-- Explanation will be shown after answering -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Test Navigation -->
+        <div class="test-navigation">
+          <button class="nav-btn prev-btn" id="prevBtn" disabled>
+            <span class="btn-icon">←</span>
+            <span class="btn-text">Previous</span>
+          </button>
+
+          <div class="question-overview">
+            <button class="overview-btn" id="overviewBtn">
+              <span class="btn-icon">🔍</span>
+              <span class="btn-text">Question Overview</span>
+            </button>
+          </div>
+
+          <button class="nav-btn next-btn" id="nextBtn">
+            <span class="btn-text">Next</span>
+            <span class="btn-icon">→</span>
+          </button>
+
+          <button class="submit-btn" id="submitBtn" style="display: none;">
+            <span class="btn-icon">📤</span>
+            <span class="btn-text">Submit Test</span>
+          </button>
+        </div>
+
+      </section>
+
+      <!-- Question Overview Modal -->
+      <div class="modal-overlay" id="modalOverlay">
+        <div class="overview-modal" id="overviewModal">
+          <div class="modal-header">
+            <h3 class="modal-title">Question Overview</h3>
+            <button class="close-modal-btn" id="closeModalBtn">×</button>
+          </div>
+          <div class="modal-content">
+            <div class="overview-legend">
+              <div class="legend-item">
+                <div class="legend-dot answered"></div>
+                <span>Answered</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot current"></div>
+                <span>Current</span>
+              </div>
+              <div class="legend-item">
+                <div class="legend-dot unanswered"></div>
+                <span>Not Answered</span>
+              </div>
+            </div>
+            <div class="overview-grid" id="overviewGrid">
+              <!-- Question overview will be generated -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="modal-btn secondary" id="closeOverviewBtn">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Screen -->
+      <section class="results-screen" id="resultsScreen">
+        <div class="results-card">
+          <div class="results-header">
+            <div class="results-icon" id="resultsIcon">🎉</div>
+            <h1 class="results-title">Test Completed!</h1>
+            <p class="results-subtitle">Here's your comprehensive performance analysis</p>
+          </div>
+
+          <div class="score-display">
+            <div class="score-circle">
+              <div class="score-number" id="scoreNumber">85</div>
+              <div class="score-percentage">%</div>
+            </div>
+            <div class="score-label">Overall Score</div>
+          </div>
+
+          <div class="results-stats">
+            <div class="stat-item correct">
+              <span class="stat-icon">✅</span>
+              <span class="stat-value" id="correctAnswers">12</span>
+              <span class="stat-label">Correct</span>
+            </div>
+            <div class="stat-item wrong">
+              <span class="stat-icon">❌</span>
+              <span class="stat-value" id="wrongAnswers">3</span>
+              <span class="stat-label">Wrong</span>
+            </div>
+            <div class="stat-item time">
+              <span class="stat-icon">⏰</span>
+              <span class="stat-value" id="timeTaken">18:45</span>
+              <span class="stat-label">Time Taken</span>
+            </div>
+          </div>
+
+          <div class="performance-breakdown">
+            <h3 class="breakdown-title">📊 Performance by Category</h3>
+            <div class="breakdown-items">
+              <div class="breakdown-item">
+                <div class="breakdown-header">
+                  <span class="breakdown-category">Coding Questions</span>
+                  <span class="breakdown-score" id="codingScore">7/8</span>
+                </div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill coding" id="codingFill" style="width: 87.5%"></div>
+                </div>
+              </div>
+              <div class="breakdown-item">
+                <div class="breakdown-header">
+                  <span class="breakdown-category">Aptitude Questions</span>
+                  <span class="breakdown-score" id="aptitudeScore">5/7</span>
+                </div>
+                <div class="breakdown-bar">
+                  <div class="breakdown-fill aptitude" id="aptitudeFill" style="width: 71.4%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-feedback-section">
+            <h3 class="feedback-title">🤖 AI Performance Analysis</h3>
+            <div class="feedback-content" id="aiFeedbackContent">
+              <div class="feedback-loading" id="feedbackLoading">
+                <div class="loading-spinner"></div>
+                <p>Analyzing your performance...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tailored-test-section" id="tailoredTestSection" style="display: none;">
+            <h3 class="tailored-title">🎯 Personalized Study Plan</h3>
+            <div class="tailored-content" id="tailoredContent">
+              <!-- AI-generated tailored plan will be displayed here -->
+            </div>
+            <div class="schedule-card">
+              <div class="schedule-header">
+                <h4 class="schedule-title">📅 Next Scheduled Test</h4>
+              </div>
+              <div class="schedule-info">
+                <div class="schedule-item">
+                  <span class="schedule-icon">📅</span>
+                  <div class="schedule-details">
+                    <span class="schedule-label">Test Date:</span>
+                    <span class="schedule-value" id="nextTestDate">October 17, 2025</span>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <span class="schedule-icon">🎯</span>
+                  <div class="schedule-details">
+                    <span class="schedule-label">Focus Areas:</span>
+                    <span class="schedule-value" id="focusAreas">Dynamic Programming, Logical Reasoning</span>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <span class="schedule-icon">📊</span>
+                  <div class="schedule-details">
+                    <span class="schedule-label">Expected Improvement:</span>
+                    <span class="schedule-value" id="expectedImprovement">15-20%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="results-actions">
+            <button class="action-btn primary" id="retakeTestBtn">
+              <span class="btn-icon">🔄</span>
+              <span class="btn-text">Retake Test</span>
+            </button>
+            <button class="action-btn secondary" id="viewDashboardBtn">
+              <span class="btn-icon">📊</span>
+              <span class="btn-text">View Dashboard</span>
+            </button>
+            <button class="action-btn tertiary" id="saveResultsBtn">
+              <span class="btn-icon">💾</span>
+              <span class="btn-text">Save Results</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo" class="footer-logo-img">
+          <span class="footer-brand">Placement Prep</span>
+        </div>
+        <span class="current-time" id="currentTimeFooter">6:03 AM IST</span>
+      </div>
+
+      <div class="footer-stats">
+        <div class="footer-stat-item">
+          <span class="stat-label">Active Users:</span>
+          <span class="stat-value"><span id="currentlyStudying">1,267</span></span>
+        </div>
+        <div class="footer-stat-item">
+          <span class="stat-label">Success Stories:</span>
+          <span class="stat-value"><span id="studentsPlacedFooter">15,394</span></span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="user-info">
+          <span class="user-label">Assessment Mode:</span>
+          <span class="user-value">Chhota Bheem</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="mcq-test (1).js"></script>
+</body>
+</html>
