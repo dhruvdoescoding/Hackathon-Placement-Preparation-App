@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Placement Preparation App</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    img{
+      max-height: 45px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-container">
+        <div class="logo"><img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png"></div>
+        <a href="#welcome" class="brand" aria-label="Path of Success - Home">Placement Preparation App</a>
+      </div>
+      <nav class="nav-actions" aria-label="Primary">
+        <button id="btnNewUser" class="btn btn--outline btn--sm btn--accent-red" type="button" aria-label="Go to New User Signup">
+          New User
+        </button>
+        <button id="btnLogin" class="btn btn--outline btn--sm btn--accent-orange" type="button" aria-label="Go to Login">
+          Log-In
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Navigation Dots -->
+  <div class="nav-dots" aria-label="Section navigation">
+    <div class="nav-dot active" data-section="0" aria-label="Welcome section"></div>
+    <div class="nav-dot" data-section="1" aria-label="User choice section"></div>
+    <div class="nav-dot" data-section="2" aria-label="Login section"></div>
+    <div class="nav-dot" data-section="3" aria-label="Signup section"></div>
+    <div class="nav-dot" data-section="4" aria-label="Personal info section"></div>
+  </div>
+
+  <!-- Scroll Hint -->
+  <div class="scroll-hint" id="scrollHint">Scroll down to navigate</div>
+
+  <main>
+    <!-- Welcome Section -->
+    <section id="welcome" class="section section--full section--active">
+      <div class="container section-content">
+        <h1 class="welcome-heading">Welcome to the Path of Success</h1>
+        <p class="welcome-subtext">Begin your journey to excellence</p>
+        <button class="btn btn--outline btn--lg btn--accent-red scroll-cta" aria-label="Go to next section">
+          Start Your Journey
+        </button>
+      </div>
+    </section>
+
+    <!-- User Choice Section -->
+    <section id="user-choice" class="section">
+      <div class="container">
+        <div class="card choice-card" aria-labelledby="choiceTitle">
+          <div class="card__header form-card__header">
+            <h2 id="choiceTitle" class="form-title">Are you a new user?</h2>
+            <p class="form-hint">Choose your path to get started</p>
+          </div>
+          <div class="card__body">
+            <div class="choice-buttons">
+              <button id="existingUserBtn" class="btn btn--choice btn--accent-orange" type="button">
+                <div class="choice-icon">👤</div>
+                <div class="choice-text">
+                  <strong>Existing User</strong>
+                  <span>I already have an account</span>
+                </div>
+              </button>
+              <button id="newUserBtn" class="btn btn--choice btn--accent-red" type="button">
+                <div class="choice-icon">✨</div>
+                <div class="choice-text">
+                  <strong>New User</strong>
+                  <span>I want to create an account</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="section">
+      <div class="container">
+        <div class="card form-card" aria-labelledby="loginTitle">
+          <div class="card__header form-card__header">
+            <h2 id="loginTitle" class="form-title">Login to Your Account</h2>
+            <p class="form-hint">Enter your existing credentials to continue</p>
+          </div>
+          <div class="card__body">
+            <form id="loginForm" class="form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="loginId" class="form-label">Id:</label>
+                  <input
+                    type="text"
+                    id="loginId"
+                    name="id"
+                    class="form-input"
+                    required
+                    placeholder="Enter your Id"
+                    aria-describedby="loginIdError"
+                  />
+                  <div id="loginIdError" class="form-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="loginPass" class="form-label">Pass:</label>
+                  <input
+                    type="password"
+                    id="loginPass"
+                    name="password"
+                    class="form-input"
+                    required
+                    placeholder="Enter your Password"
+                    aria-describedby="loginPassError"
+                  />
+                  <div id="loginPassError" class="form-error" aria-live="polite"></div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary btn--lg">
+                  Login
+                </button>
+                <button type="button" id="switchToSignup" class="btn btn--outline btn--sm">
+                  Don't have an account? Sign up
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="section">
+      <div class="container">
+        <div class="card form-card" aria-labelledby="signupTitle">
+          <div class="card__header form-card__header">
+            <h2 id="signupTitle" class="form-title">Create Id & Password</h2>
+            <p class="form-hint">Create your unique credentials to get started</p>
+          </div>
+          <div class="card__body">
+            <form id="signupForm" class="form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="signupId" class="form-label">Id:</label>
+                  <input
+                    type="text"
+                    id="signupId"
+                    name="id"
+                    class="form-input"
+                    required
+                    placeholder="Create your unique Id"
+                    aria-describedby="signupIdError"
+                  />
+                  <div id="signupIdError" class="form-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="signupPass" class="form-label">Pass:</label>
+                  <input
+                    type="password"
+                    id="signupPass"
+                    name="password"
+                    class="form-input"
+                    required
+                    placeholder="Create a strong password"
+                    aria-describedby="signupPassError"
+                  />
+                  <div id="signupPassError" class="form-error" aria-live="polite"></div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary btn--lg">
+                  Create Account
+                </button>
+                <button type="button" id="switchToLogin" class="btn btn--outline btn--sm">
+                  Already have an account? Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Information Section -->
+    <section id="personal-info" class="section">
+      <div class="container">
+        <div class="card form-card" aria-labelledby="piTitle">
+          <div class="card__header form-card__header">
+            <h2 id="piTitle" class="form-title">Personal Information</h2>
+            <p class="form-hint">Complete your profile with the details below</p>
+          </div>
+          <div class="card__body">
+            <form id="piForm" class="form" novalidate>
+              <div class="form-grid form-grid--2col">
+                <div class="form-group">
+                  <label for="piName" class="form-label">Name:</label>
+                  <input
+                    type="text"
+                    id="piName"
+                    name="name"
+                    class="form-input"
+                    required
+                    placeholder="Enter your full name"
+                    aria-describedby="piNameError"
+                  />
+                  <div id="piNameError" class="form-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="piUniversityRoll" class="form-label">University Roll No:</label>
+                  <input
+                    type="text"
+                    id="piUniversityRoll"
+                    name="universityRoll"
+                    class="form-input"
+                    required
+                    placeholder="Enter your roll number"
+                    aria-describedby="piUniversityRollError"
+                  />
+                  <div id="piUniversityRollError" class="form-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="piGithubId" class="form-label">GitHub Id:</label>
+                  <input
+                    type="text"
+                    id="piGithubId"
+                    name="githubId"
+                    class="form-input"
+                    required
+                    placeholder="Enter your GitHub username"
+                    aria-describedby="piGithubIdError"
+                  />
+                  <div id="piGithubIdError" class="form-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="piCodeforcesRating" class="form-label">Codeforces Rating:</label>
+                  <input
+                    type="number"
+                    id="piCodeforcesRating"
+                    name="codeforcesRating"
+                    class="form-input"
+                    min="0"
+                    max="4000"
+                    placeholder="Enter your rating (optional)"
+                    aria-describedby="piCodeforcesRatingError"
+                  />
+                  <div id="piCodeforcesRatingError" class="form-error" aria-live="polite"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="piLeetcodeRating" class="form-label">Leetcode Rating:</label>
+                  <input
+                    type="number"
+                    id="piLeetcodeRating"
+                    name="leetcodeRating"
+                    class="form-input"
+                    min="0"
+                    max="5000"
+                    placeholder="Enter your rating (optional)"
+                    aria-describedby="piLeetcodeRatingError"
+                  />
+                  <div id="piLeetcodeRatingError" class="form-error" aria-live="polite"></div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary btn--lg">
+                  Complete Registration
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with Motivational Stats -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-stats">
+        <div class="stat-item">
+          <span class="active-dot"></span>
+          <span class="stat-text"><span id="activeUsers">1,247</span> active users rn</span>
+        </div>
+        <div class="stat-divider">•</div>
+        <div class="stat-item">
+          <span class="stat-text"><span id="studentsHelped">15,382</span> students helped so far</span>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; <span id="year">2025</span> Path of Success. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

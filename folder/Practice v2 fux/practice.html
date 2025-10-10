@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Tests - Placement Preparation App</title>
+  <link rel="stylesheet" href="practice.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-container">
+        <div class="logo-clickable" id="logoHome">
+          <div class="logo">
+            <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo">
+          </div>
+          <span class="brand">Placement Preparation App</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="datetime-display">
+          <div class="time-display" id="currentTime">5:17 AM</div>
+          <div class="date-display">Oct 10, 2025</div>
+        </div>
+
+        <div class="motivational-stats">
+          <div class="stat-item">
+            <span class="active-dot"></span>
+            <span class="stat-text"><span id="activeUsers">1,252</span> currently studying</span>
+          </div>
+          <div class="stat-divider">•</div>
+          <div class="stat-item">
+            <span class="stat-text"><span id="studentsHelped">15,382</span> students helped</span>
+          </div>
+        </div>
+
+        <div class="options-container">
+          <button id="menuBtn" class="options-btn">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Options</span>
+          </button>
+          <div id="menuDropdown" class="options-dropdown">
+            <div class="dropdown-arrow"></div>
+            <ul class="dropdown-menu">
+              <li><a href="leaderboard.html" class="dropdown-item">🏆 Leaderboard</a></li>
+              <li><a href="profile.html" class="dropdown-item">👤 Profile</a></li>
+              <li><a href="test.html" class="dropdown-item">📝 Test</a></li>
+              <li><a href="practice.html" class="dropdown-item active">💪 Practice</a></li>
+              <li><a href="feedback.html" class="dropdown-item">💬 Feedback</a></li>
+              <li><a href="helpdesk.html" class="dropdown-item">🆘 Help Desk</a></li>
+              <li><a href="about.html" class="dropdown-item">ℹ️ About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="practice-main">
+    <div class="container">
+
+      <!-- Page Header -->
+      <section class="page-header">
+        <h1 class="page-title">
+          <span class="title-icon">💪</span>
+          Practice Tests
+        </h1>
+        <p class="page-description">Sharpen your skills with targeted practice sessions</p>
+        <div class="practice-stats">
+          <div class="stat-badge">
+            <span class="stat-number">42</span>
+            <span class="stat-label">Tests Completed</span>
+          </div>
+          <div class="stat-badge">
+            <span class="stat-number">78%</span>
+            <span class="stat-label">Average Score</span>
+          </div>
+          <div class="stat-badge">
+            <span class="stat-number">15</span>
+            <span class="stat-label">Days Streak</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Practice Test Categories -->
+      <section class="practice-categories">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-icon">🎯</span>
+            Practice Categories
+          </h2>
+          <p class="section-subtitle">Choose your focus area and start practicing</p>
+        </div>
+
+        <div class="categories-grid">
+
+          <!-- Coding Test Card -->
+          <div class="practice-card coding-card">
+            <div class="card-header">
+              <div class="card-icon coding-icon">
+                <span class="icon">💻</span>
+              </div>
+              <div class="card-info">
+                <h3 class="card-title">Coding Test</h3>
+                <p class="card-subtitle">Data Structures & Algorithms</p>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="card-description">
+                Practice coding problems, algorithms, and data structures. 
+                Improve your problem-solving skills with varied difficulty levels.
+              </div>
+
+              <div class="card-stats">
+                <div class="stat-item">
+                  <span class="stat-value">25</span>
+                  <span class="stat-name">Problems</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">60 min</span>
+                  <span class="stat-name">Duration</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">Medium</span>
+                  <span class="stat-name">Difficulty</span>
+                </div>
+              </div>
+
+              <div class="recent-score">
+                <span class="score-label">Last Score:</span>
+                <span class="score-value">8.2/10</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <button class="attempt-btn coding-btn" data-test-type="coding">
+                <span class="btn-icon">🚀</span>
+                <span class="btn-text">Attempt Test</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Aptitude Test Card -->
+          <div class="practice-card aptitude-card">
+            <div class="card-header">
+              <div class="card-icon aptitude-icon">
+                <span class="icon">🧠</span>
+              </div>
+              <div class="card-info">
+                <h3 class="card-title">Aptitude Test</h3>
+                <p class="card-subtitle">Logical & Analytical Reasoning</p>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="card-description">
+                Test your logical reasoning, numerical ability, and analytical skills. 
+                Perfect for competitive exam preparation.
+              </div>
+
+              <div class="card-stats">
+                <div class="stat-item">
+                  <span class="stat-value">40</span>
+                  <span class="stat-name">Questions</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">45 min</span>
+                  <span class="stat-name">Duration</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">Mixed</span>
+                  <span class="stat-name">Difficulty</span>
+                </div>
+              </div>
+
+              <div class="recent-score">
+                <span class="score-label">Last Score:</span>
+                <span class="score-value">9.1/10</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <button class="attempt-btn aptitude-btn" data-test-type="aptitude">
+                <span class="btn-icon">🚀</span>
+                <span class="btn-text">Attempt Test</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Communication Test Card -->
+          <div class="practice-card communication-card">
+            <div class="card-header">
+              <div class="card-icon communication-icon">
+                <span class="icon">💬</span>
+              </div>
+              <div class="card-info">
+                <h3 class="card-title">Communication Test</h3>
+                <p class="card-subtitle">Verbal & Written Skills</p>
+              </div>
+            </div>
+
+            <div class="card-content">
+              <div class="card-description">
+                Enhance your communication skills with reading comprehension, 
+                grammar, vocabulary, and writing exercises.
+              </div>
+
+              <div class="card-stats">
+                <div class="stat-item">
+                  <span class="stat-value">30</span>
+                  <span class="stat-name">Questions</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">40 min</span>
+                  <span class="stat-name">Duration</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-value">Easy</span>
+                  <span class="stat-name">Difficulty</span>
+                </div>
+              </div>
+
+              <div class="recent-score">
+                <span class="score-label">Last Score:</span>
+                <span class="score-value">7.8/10</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <button class="attempt-btn communication-btn" data-test-type="communication">
+                <span class="btn-icon">🚀</span>
+                <span class="btn-text">Attempt Test</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Practice Test History -->
+      <section class="practice-history">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-icon">📊</span>
+            Practice Test History
+          </h2>
+          <p class="section-subtitle">Review your past performance and track progress</p>
+        </div>
+
+        <div class="history-card">
+          <div class="history-controls">
+            <div class="filter-group">
+              <label for="historyFilter" class="filter-label">Filter by Test Type:</label>
+              <select id="historyFilter" class="history-filter">
+                <option value="all">All Tests</option>
+                <option value="coding">Coding Tests</option>
+                <option value="aptitude">Aptitude Tests</option>
+                <option value="communication">Communication Tests</option>
+              </select>
+            </div>
+            <div class="view-toggle">
+              <button class="toggle-btn active" data-view="list">📋 List View</button>
+              <button class="toggle-btn" data-view="chart">📈 Chart View</button>
+            </div>
+          </div>
+
+          <div class="history-content">
+
+            <!-- List View -->
+            <div class="history-list-view active" id="historyListView">
+              <div class="history-dropdown-container">
+                <select class="history-dropdown" id="historyTestSelect">
+                  <option value="">Select a test to view details</option>
+                  <option value="test1">Coding Practice #23 - Oct 9, 2025 - Score: 8.2/10</option>
+                  <option value="test2">Aptitude Challenge #18 - Oct 8, 2025 - Score: 9.1/10</option>
+                  <option value="test3">Communication Skills #15 - Oct 7, 2025 - Score: 7.8/10</option>
+                  <option value="test4">Coding Marathon #22 - Oct 6, 2025 - Score: 7.5/10</option>
+                  <option value="test5">Logical Reasoning #17 - Oct 5, 2025 - Score: 8.7/10</option>
+                  <option value="test6">Grammar & Vocab #14 - Oct 4, 2025 - Score: 8.0/10</option>
+                  <option value="test7">Data Structures #21 - Oct 3, 2025 - Score: 8.9/10</option>
+                  <option value="test8">Numerical Ability #16 - Oct 2, 2025 - Score: 7.2/10</option>
+                  <option value="test9">Reading Comprehension #13 - Oct 1, 2025 - Score: 8.5/10</option>
+                  <option value="test10">Algorithm Practice #20 - Sep 30, 2025 - Score: 8.3/10</option>
+                  <option value="test11">Pattern Recognition #15 - Sep 29, 2025 - Score: 9.0/10</option>
+                  <option value="test12">Essay Writing #12 - Sep 28, 2025 - Score: 7.6/10</option>
+                </select>
+              </div>
+
+              <div class="selected-history-container" id="selectedHistoryContainer">
+                <div class="no-selection-message">
+                  <div class="message-icon">📝</div>
+                  <h3>Select a Practice Test</h3>
+                  <p>Choose a test from the dropdown above to view detailed performance analysis and results.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chart View -->
+            <div class="history-chart-view" id="historyChartView">
+              <div class="chart-container">
+                <div class="chart-header">
+                  <h4 class="chart-title">Performance Trend (Last 30 Days)</h4>
+                  <div class="chart-legend">
+                    <div class="legend-item">
+                      <span class="legend-dot coding"></span>
+                      <span class="legend-label">Coding</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-dot aptitude"></span>
+                      <span class="legend-label">Aptitude</span>
+                    </div>
+                    <div class="legend-item">
+                      <span class="legend-dot communication"></span>
+                      <span class="legend-label">Communication</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="chart-placeholder">
+                  <div class="chart-visual">
+                    <div class="chart-bars">
+                      <div class="chart-bar" style="height: 82%;" data-score="8.2" data-type="coding"></div>
+                      <div class="chart-bar" style="height: 91%;" data-score="9.1" data-type="aptitude"></div>
+                      <div class="chart-bar" style="height: 78%;" data-score="7.8" data-type="communication"></div>
+                      <div class="chart-bar" style="height: 75%;" data-score="7.5" data-type="coding"></div>
+                      <div class="chart-bar" style="height: 87%;" data-score="8.7" data-type="aptitude"></div>
+                      <div class="chart-bar" style="height: 80%;" data-score="8.0" data-type="communication"></div>
+                      <div class="chart-bar" style="height: 89%;" data-score="8.9" data-type="coding"></div>
+                      <div class="chart-bar" style="height: 72%;" data-score="7.2" data-type="aptitude"></div>
+                      <div class="chart-bar" style="height: 85%;" data-score="8.5" data-type="communication"></div>
+                      <div class="chart-bar" style="height: 83%;" data-score="8.3" data-type="coding"></div>
+                    </div>
+                  </div>
+                  <div class="chart-summary">
+                    <div class="summary-stat">
+                      <span class="summary-label">Average Score:</span>
+                      <span class="summary-value">8.2/10</span>
+                    </div>
+                    <div class="summary-stat">
+                      <span class="summary-label">Best Performance:</span>
+                      <span class="summary-value">9.1/10</span>
+                    </div>
+                    <div class="summary-stat">
+                      <span class="summary-label">Improvement Trend:</span>
+                      <span class="summary-value trend-up">↗ +0.8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo" class="footer-logo-img">
+          <span class="footer-brand">Placement Prep</span>
+        </div>
+        <span class="current-time" id="currentTimeFooter">5:17 AM IST</span>
+      </div>
+
+      <div class="footer-stats">
+        <div class="footer-stat-item">
+          <span class="stat-label">Active Users:</span>
+          <span class="stat-value"><span id="currentlyStudying">1,252</span></span>
+        </div>
+        <div class="footer-stat-item">
+          <span class="stat-label">Success Stories:</span>
+          <span class="stat-value"><span id="studentsPlacedFooter">15,382</span></span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="user-info">
+          <span class="user-label">Practice Mode:</span>
+          <span class="user-value">Chhota Bheem</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="practice (1).js"></script>
+</body>
+</html>

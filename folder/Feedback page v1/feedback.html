@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback - Placement Preparation App</title>
+  <link rel="stylesheet" href="feedback.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-container">
+        <div class="logo-clickable" id="logoHome">
+          <div class="logo">
+            <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo">
+          </div>
+          <span class="brand">Placement Preparation App</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="datetime-display">
+          <div class="time-display" id="currentTime">4:57 AM</div>
+          <div class="date-display">Oct 10, 2025</div>
+        </div>
+
+        <div class="motivational-stats">
+          <div class="stat-item">
+            <span class="active-dot"></span>
+            <span class="stat-text"><span id="activeUsers">1,252</span> currently studying</span>
+          </div>
+          <div class="stat-divider">•</div>
+          <div class="stat-item">
+            <span class="stat-text"><span id="studentsHelped">15,382</span> students helped</span>
+          </div>
+        </div>
+
+        <div class="options-container">
+          <button id="menuBtn" class="options-btn">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Options</span>
+          </button>
+          <div id="menuDropdown" class="options-dropdown">
+            <div class="dropdown-arrow"></div>
+            <ul class="dropdown-menu">
+              <li><a href="leaderboard.html" class="dropdown-item">🏆 Leaderboard</a></li>
+              <li><a href="profile.html" class="dropdown-item">👤 Profile</a></li>
+              <li><a href="test.html" class="dropdown-item">📝 Test</a></li>
+              <li><a href="practice.html" class="dropdown-item">💪 Practice</a></li>
+              <li><a href="feedback.html" class="dropdown-item active">💬 Feedback</a></li>
+              <li><a href="helpdesk.html" class="dropdown-item">🆘 Help Desk</a></li>
+              <li><a href="about.html" class="dropdown-item">ℹ️ About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="feedback-main">
+    <div class="container">
+
+      <!-- Page Header -->
+      <section class="page-header">
+        <h1 class="page-title">
+          <span class="title-icon">💬</span>
+          Feedback
+        </h1>
+        <p class="page-description">Review your performance insights and improvement recommendations</p>
+      </section>
+
+      <!-- GLA Feedback Section -->
+      <section class="feedback-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-icon">🎓</span>
+            GLA Feedback
+          </h2>
+          <p class="section-subtitle">Official feedback from GLA administrators</p>
+        </div>
+
+        <div class="feedback-card gla-feedback-card">
+          <div class="feedback-container">
+            <div class="feedback-scroll" id="glaFeedbackScroll">
+
+              <!-- GLA Feedback Items -->
+              <div class="feedback-item">
+                <div class="feedback-header">
+                  <div class="feedback-type coding">
+                    <span class="type-icon">💻</span>
+                    <span class="type-label">Coding Assessment</span>
+                  </div>
+                  <div class="feedback-date">Oct 8, 2025</div>
+                </div>
+                <div class="feedback-content">
+                  <h4 class="feedback-title">Strong Foundation, Focus on Optimization</h4>
+                  <p class="feedback-text">
+                    Your coding fundamentals are solid with good understanding of data structures. However, 
+                    focus on algorithm optimization and time complexity analysis. Practice more dynamic programming 
+                    problems and work on reducing space complexity in your solutions.
+                  </p>
+                  <div class="feedback-score">
+                    <span class="score-label">Overall Score:</span>
+                    <span class="score-value">7.2/10</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feedback-item">
+                <div class="feedback-header">
+                  <div class="feedback-type aptitude">
+                    <span class="type-icon">🧠</span>
+                    <span class="type-label">Aptitude Test</span>
+                  </div>
+                  <div class="feedback-date">Oct 6, 2025</div>
+                </div>
+                <div class="feedback-content">
+                  <h4 class="feedback-title">Excellent Logical Reasoning Skills</h4>
+                  <p class="feedback-text">
+                    Outstanding performance in logical reasoning and pattern recognition. Your quantitative 
+                    abilities are above average. Continue practicing verbal reasoning section to maintain 
+                    balance across all areas. Focus on reading comprehension speed.
+                  </p>
+                  <div class="feedback-score">
+                    <span class="score-label">Overall Score:</span>
+                    <span class="score-value">8.5/10</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feedback-item">
+                <div class="feedback-header">
+                  <div class="feedback-type communication">
+                    <span class="type-icon">💬</span>
+                    <span class="type-label">Communication Skills</span>
+                  </div>
+                  <div class="feedback-date">Oct 4, 2025</div>
+                </div>
+                <div class="feedback-content">
+                  <h4 class="feedback-title">Good Progress in Presentation Skills</h4>
+                  <p class="feedback-text">
+                    Your written communication has improved significantly. Speaking confidence is developing well. 
+                    Work on structuring your thoughts more clearly during interviews. Practice group discussions 
+                    and focus on active listening skills to enhance team collaboration.
+                  </p>
+                  <div class="feedback-score">
+                    <span class="score-label">Overall Score:</span>
+                    <span class="score-value">7.8/10</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feedback-item">
+                <div class="feedback-header">
+                  <div class="feedback-type aptitude">
+                    <span class="type-icon">🧠</span>
+                    <span class="type-label">Mock Interview</span>
+                  </div>
+                  <div class="feedback-date">Oct 2, 2025</div>
+                </div>
+                <div class="feedback-content">
+                  <h4 class="feedback-title">Technical Knowledge Strong, Soft Skills Need Work</h4>
+                  <p class="feedback-text">
+                    Impressive technical knowledge demonstration during the mock interview. However, 
+                    work on articulating your thoughts more clearly and confidently. Practice explaining 
+                    complex concepts in simple terms. Body language and eye contact need improvement.
+                  </p>
+                  <div class="feedback-score">
+                    <span class="score-label">Overall Score:</span>
+                    <span class="score-value">7.0/10</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weekly Test Feedback Section -->
+      <section class="feedback-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-icon">📊</span>
+            Weekly Test Feedback
+          </h2>
+          <p class="section-subtitle">Performance analysis from your recent tests</p>
+        </div>
+
+        <div class="feedback-card weekly-feedback-card">
+          <div class="feedback-dropdown-container">
+            <select class="feedback-dropdown" id="weeklyFeedbackSelect">
+              <option value="">Select a test to view feedback</option>
+              <option value="test1">Test #47 - Aptitude Challenge (Oct 9, 2025) - ID: APT_2025_1009_47</option>
+              <option value="test2">Test #46 - Coding Marathon (Oct 7, 2025) - ID: COD_2025_1007_46</option>
+              <option value="test3">Test #45 - Communication Skills (Oct 5, 2025) - ID: COM_2025_1005_45</option>
+              <option value="test4">Test #44 - Full Stack Mock (Oct 3, 2025) - ID: FSM_2025_1003_44</option>
+              <option value="test5">Test #43 - Data Structures (Oct 1, 2025) - ID: DSA_2025_1001_43</option>
+              <option value="test6">Test #42 - System Design (Sep 29, 2025) - ID: SYS_2025_0929_42</option>
+              <option value="test7">Test #41 - Algorithm Analysis (Sep 27, 2025) - ID: ALG_2025_0927_41</option>
+              <option value="test8">Test #40 - Database Concepts (Sep 25, 2025) - ID: DB_2025_0925_40</option>
+              <option value="test9">Test #39 - Web Development (Sep 23, 2025) - ID: WEB_2025_0923_39</option>
+              <option value="test10">Test #38 - Problem Solving (Sep 21, 2025) - ID: PS_2025_0921_38</option>
+            </select>
+          </div>
+
+          <div class="selected-feedback-container" id="selectedFeedbackContainer">
+            <div class="no-selection-message">
+              <div class="message-icon">📝</div>
+              <h3>Select a Test</h3>
+              <p>Choose a test from the dropdown above to view detailed feedback and performance analysis.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scheduled Tailored Test Section -->
+      <section class="feedback-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-icon">🎯</span>
+            Scheduled Tailored Test
+          </h2>
+          <p class="section-subtitle">Personalized test based on your weak areas</p>
+        </div>
+
+        <div class="feedback-card tailored-test-card">
+          <div class="tailored-test-content">
+            <div class="test-info-section">
+              <div class="test-status-badge">Ready</div>
+              <h3 class="test-title">Personalized Assessment #12</h3>
+              <p class="test-description">
+                Based on your recent performance analysis, this test focuses on your improvement areas: 
+                Algorithm optimization, Dynamic programming, and System design patterns.
+              </p>
+
+              <div class="test-details">
+                <div class="detail-item">
+                  <span class="detail-label">Duration:</span>
+                  <span class="detail-value">90 minutes</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Questions:</span>
+                  <span class="detail-value">25 adaptive questions</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Focus Areas:</span>
+                  <span class="detail-value">Coding & Problem Solving</span>
+                </div>
+              </div>
+
+              <button class="attempt-test-btn" id="attemptTailoredTest">
+                <span class="btn-icon">🚀</span>
+                <span class="btn-text">Attempt Tailored Test</span>
+                <span class="btn-arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trouble Topics Analysis Section -->
+      <section class="feedback-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-icon">⚠️</span>
+            Common Trouble Topics
+          </h2>
+          <p class="section-subtitle">Areas where students need more practice</p>
+        </div>
+
+        <div class="feedback-card trouble-topics-card">
+          <div class="feedback-dropdown-container">
+            <select class="feedback-dropdown" id="troubleTopicsSelect">
+              <option value="">View trouble topics analysis</option>
+              <option value="topic1">Dynamic Programming - Test ID: DP_2025_1008_23</option>
+              <option value="topic2">System Design Scalability - Test ID: SD_2025_1007_19</option>
+              <option value="topic3">Graph Algorithms - Test ID: GR_2025_1006_15</option>
+              <option value="topic4">Database Normalization - Test ID: DB_2025_1005_12</option>
+              <option value="topic5">Network Security - Test ID: NS_2025_1004_08</option>
+              <option value="topic6">Object-Oriented Design - Test ID: OOD_2025_1003_21</option>
+              <option value="topic7">Time Complexity Analysis - Test ID: TC_2025_1002_17</option>
+              <option value="topic8">REST API Design - Test ID: API_2025_1001_14</option>
+              <option value="topic9">Binary Tree Traversals - Test ID: BT_2025_0930_11</option>
+              <option value="topic10">Memory Management - Test ID: MM_2025_0929_09</option>
+            </select>
+          </div>
+
+          <div class="trouble-topics-container" id="troubleTopicsContainer">
+            <div class="no-selection-message">
+              <div class="message-icon">📊</div>
+              <h3>Select Topic Analysis</h3>
+              <p>Choose a topic from the dropdown to view detailed analysis of common student difficulties.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo" class="footer-logo-img">
+          <span class="footer-brand">Placement Prep</span>
+        </div>
+        <span class="current-time" id="currentTimeFooter">4:57 AM IST</span>
+      </div>
+
+      <div class="footer-stats">
+        <div class="footer-stat-item">
+          <span class="stat-label">Active Users:</span>
+          <span class="stat-value"><span id="currentlyStudying">1,252</span></span>
+        </div>
+        <div class="footer-stat-item">
+          <span class="stat-label">Success Stories:</span>
+          <span class="stat-value"><span id="studentsPlacedFooter">15,382</span></span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="user-info">
+          <span class="user-label">Feedback for:</span>
+          <span class="user-value">Dhruv Pathak</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="feedback.js"></script>
+</body>
+</html>

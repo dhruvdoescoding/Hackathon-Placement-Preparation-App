@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - Placement Preparation App</title>
+  <link rel="stylesheet" href="profile-WORKING.css" />
+</head>
+<body>
+  <!-- Header with Logo and Working Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="left-section">
+        <div class="brand-container">
+          <div class="logo-clickable" id="logoHome">
+            <div class="logo"><img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo"></div>
+            <span class="brand">Placement Preparation App</span>
+          </div>
+        </div>
+
+        <!-- FIXED Navigation Options Dropdown -->
+        <div class="nav-dropdown">
+          <button id="optionsBtn" class="btn btn--outline btn--sm options-btn" type="button" aria-expanded="false" aria-haspopup="true">
+            <span class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            Options
+          </button>
+          <div id="optionsDropdown" class="dropdown-menu" role="menu">
+            <a href="leaderboard.html" class="dropdown-item" role="menuitem">🏆 Leaderboard</a>
+            <a href="profile.html" class="dropdown-item active" role="menuitem">👤 Profile</a>
+            <a href="test.html" class="dropdown-item" role="menuitem">📝 Test</a>
+            <a href="practice.html" class="dropdown-item" role="menuitem">💪 Practice</a>
+            <a href="feedback.html" class="dropdown-item" role="menuitem">💬 Feedback</a>
+            <a href="helpdesk.html" class="dropdown-item" role="menuitem">🆘 Help Desk</a>
+            <a href="about.html" class="dropdown-item" role="menuitem">ℹ️ About</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="motivational-stats">
+          <div class="stat-item">
+            <span class="active-dot"></span>
+            <span class="stat-text"><span id="activeUsers">1,247</span> active users</span>
+          </div>
+          <div class="stat-divider">•</div>
+          <div class="stat-item">
+            <span class="stat-text"><span id="studentsHelped">15,382</span> helped</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Profile Content -->
+  <main class="profile-main">
+    <div class="container">
+
+      <!-- Profile Header Section -->
+      <section class="profile-header">
+        <div class="profile-card">
+          <div class="profile-image-container">
+            <img id="userProfilePic" src="adventures-of-chhota-bheem-and-his-friends-will-be-aired-on-dd-national-every-afternoon-at-2-pm-.webp" alt="User Profile" class="profile-image">
+            <button class="image-upload-btn" title="Change Profile Picture">
+              <span>📷</span>
+            </button>
+          </div>
+          <div class="profile-info">
+            <h1 class="profile-name" id="userName">Chhota Bheem</h1>
+            <p class="profile-username" id="userUsername">@chhotabheem</p>
+            <p class="profile-university" id="userUniversity">Student ID: <span id="universityRoll">CS2023001</span></p>
+            <p class="profile-github">GitHub: <span id="githubId">dholakpur-laddoo-devourver</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coding Platforms Section -->
+      <section class="coding-platforms">
+        <h2 class="section-title">Coding Platform Ratings</h2>
+        <div class="platforms-grid">
+          <div class="platform-card codeforces">
+            <div class="platform-header">
+              <div class="platform-icon">🔶</div>
+              <div class="platform-info">
+                <h3>Codeforces</h3>
+                <span class="platform-subtitle">Competitive Programming</span>
+              </div>
+            </div>
+            <div class="platform-rating">
+              <div class="rating-number" id="codeforcesRating">1420</div>
+              <div class="rating-label">Rating</div>
+              <div class="rating-rank" id="codeforcesRank">Expert</div>
+            </div>
+          </div>
+
+          <div class="platform-card leetcode">
+            <div class="platform-header">
+              <div class="platform-icon">🟠</div>
+              <div class="platform-info">
+                <h3>LeetCode</h3>
+                <span class="platform-subtitle">Problem Solving</span>
+              </div>
+            </div>
+            <div class="platform-rating">
+              <div class="rating-number" id="leetcodeRating">1850</div>
+              <div class="rating-label">Rating</div>
+              <div class="rating-rank" id="leetcodeRank">Knight</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Progress Tracking Section -->
+      <section class="progress-section">
+        <h2 class="section-title">Skill Development Progress</h2>
+        <div class="progress-cards">
+          <div class="progress-card communication">
+            <div class="progress-header">
+              <div class="progress-icon">💬</div>
+              <div class="progress-info">
+                <h3>Communication Skills</h3>
+                <span class="progress-subtitle">Improvement</span>
+              </div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="72" style="width: 72%"></div>
+              </div>
+              <span class="progress-percentage">72%</span>
+            </div>
+            <div class="progress-details">
+              <span class="progress-sessions">12 sessions completed</span>
+              <span class="progress-trend">↗️ +5% this week</span>
+            </div>
+          </div>
+
+          <div class="progress-card aptitude">
+            <div class="progress-header">
+              <div class="progress-icon">🧠</div>
+              <div class="progress-info">
+                <h3>Aptitude Skills</h3>
+                <span class="progress-subtitle">Improvement</span>
+              </div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="85" style="width: 85%"></div>
+              </div>
+              <span class="progress-percentage">85%</span>
+            </div>
+            <div class="progress-details">
+              <span class="progress-sessions">18 sessions completed</span>
+              <span class="progress-trend">↗️ +8% this week</span>
+            </div>
+          </div>
+
+          <div class="progress-card coding">
+            <div class="progress-header">
+              <div class="progress-icon">💻</div>
+              <div class="progress-info">
+                <h3>Coding Skills</h3>
+                <span class="progress-subtitle">Improvement</span>
+              </div>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar">
+                <div class="progress-fill" data-progress="68" style="width: 68%"></div>
+              </div>
+              <span class="progress-percentage">68%</span>
+            </div>
+            <div class="progress-details">
+              <span class="progress-sessions">15 sessions completed</span>
+              <span class="progress-trend">↗️ +3% this week</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Overview -->
+      <section class="stats-overview">
+        <h2 class="section-title">Your Achievement Stats</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-content">
+              <div class="stat-number" id="totalSessions">47</div>
+              <div class="stat-label">Total Sessions</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">📝</div>
+            <div class="stat-content">
+              <div class="stat-number" id="testsCompleted">23</div>
+              <div class="stat-label">Tests Completed</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-content">
+              <div class="stat-number" id="currentRank">#42</div>
+              <div class="stat-label">Current Rank</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-content">
+              <div class="stat-number" id="streakCount">7</div>
+              <div class="stat-label">Day Streak</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Activity Section -->
+      <section class="recent-activity">
+        <h2 class="section-title">Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-icon">🧠</div>
+            <div class="activity-content">
+              <div class="activity-title">Completed Aptitude Test #15</div>
+              <div class="activity-details">Score: 85% • 2 hours ago</div>
+            </div>
+            <div class="activity-score positive">+8 points</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">💬</div>
+            <div class="activity-content">
+              <div class="activity-title">Communication Skills Session</div>
+              <div class="activity-details">Presentation practice • 1 day ago</div>
+            </div>
+            <div class="activity-score positive">+5 points</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">💻</div>
+            <div class="activity-content">
+              <div class="activity-title">Solved Coding Challenge</div>
+              <div class="activity-details">Dynamic Programming • 2 days ago</div>
+            </div>
+            <div class="activity-score positive">+12 points</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">🧠</div>
+            <div class="activity-content">
+              <div class="activity-title">Aptitude Logical Reasoning</div>
+              <div class="activity-details">Score: 78% • 3 days ago</div>
+            </div>
+            <div class="activity-score positive">+6 points</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">💻</div>
+            <div class="activity-content">
+              <div class="activity-title">Coding Practice Session</div>
+              <div class="activity-details">Data Structures • 4 days ago</div>
+            </div>
+            <div class="activity-score positive">+7 points</div>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-icon">💬</div>
+            <div class="activity-content">
+              <div class="activity-title">Communication Workshop</div>
+              <div class="activity-details">Group Discussion • 5 days ago</div>
+            </div>
+            <div class="activity-score positive">+4 points</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-stats">
+        <div class="stat-item">
+          <span class="active-dot"></span>
+          <span class="stat-text"><span id="currentlyStudying">1,247</span> students currently learning</span>
+        </div>
+        <div class="stat-divider">•</div>
+        <div class="stat-item">
+          <span class="stat-text"><span id="studentsPlaced">15,382</span> success stories</span>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; <span id="year">2025</span> Placement Preparation App. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="profile-WORKING.js"></script>
+</body>
+</html>

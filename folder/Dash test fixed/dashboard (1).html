@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Placement Preparation App</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-container">
+        <div class="logo-clickable" id="logoHome">
+          <div class="logo">
+            <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo">
+          </div>
+          <span class="brand">Placement Preparation App</span>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="datetime-display">
+          <div class="time-display" id="currentTime">4:13 AM</div>
+          <div class="date-display">Oct 10, 2025</div>
+        </div>
+
+        <div class="motivational-stats">
+          <div class="stat-item">
+            <span class="active-dot"></span>
+            <span class="stat-text"><span id="activeUsers">1,252</span> currently studying</span>
+          </div>
+          <div class="stat-divider">•</div>
+          <div class="stat-item">
+            <span class="stat-text"><span id="studentsHelped">15,382</span> students helped</span>
+          </div>
+        </div>
+
+        <div class="options-container">
+          <button id="menuBtn" class="options-btn">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span>Options</span>
+          </button>
+          <div id="menuDropdown" class="options-dropdown">
+            <div class="dropdown-arrow"></div>
+            <ul class="dropdown-menu">
+              <li><a href="leaderboard.html" class="dropdown-item">🏆 Leaderboard</a></li>
+              <li><a href="profile.html" class="dropdown-item">👤 Profile</a></li>
+              <li><a href="test.html" class="dropdown-item">📝 Test</a></li>
+              <li><a href="practice.html" class="dropdown-item">💪 Practice</a></li>
+              <li><a href="feedback.html" class="dropdown-item">💬 Feedback</a></li>
+              <li><a href="helpdesk.html" class="dropdown-item">🆘 Help Desk</a></li>
+              <li><a href="about.html" class="dropdown-item">ℹ️ About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="dashboard-main">
+    <div class="container">
+
+      <!-- Welcome Section -->
+      <section class="welcome-section">
+        <div class="welcome-card">
+          <div class="profile-section">
+            <div class="profile-avatar">
+              <img src="adventures-of-chhota-bheem-and-his-friends-will-be-aired-on-dd-national-every-afternoon-at-2-pm-.webp" alt="Profile" class="avatar-image">
+              <div class="online-indicator"></div>
+            </div>
+            <div class="profile-info">
+              <div class="greeting">
+                <h1 class="welcome-title">Hi, <span class="user-name">Chhota Bheem</span></h1>
+                <p class="user-status">Ready to be one step ahead!! 👍🏻</p>
+              </div>
+
+              <!-- Take Initial Test Section -->
+              <div class="initial-test-card">
+                <div class="test-card-header">
+                  <div class="test-icon">🚀</div>
+                  <div class="test-info">
+                    <h3 class="test-title">Take Initial Test</h3>
+                    <p class="test-subtitle">Required for new users</p>
+                  </div>
+                </div>
+                <p class="test-description">
+                  Complete an initial assessment to determine your starting level and personalize your learning journey.
+                </p>
+                <button id="takeInitialTestBtn" class="take-initial-test-btn">
+                  <span class="btn-icon">🚀</span>
+                  <span class="btn-text">Start Assessment</span>
+                  <span class="btn-arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="quick-stats-section">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-content">
+                  <div class="stat-number">24</div>
+                  <div class="stat-label">Tests Taken</div>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-content">
+                  <div class="stat-number">#42</div>
+                  <div class="stat-label">Rank</div>
+                </div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-content">
+                  <div class="stat-number">7</div>
+                  <div class="stat-label">Streak</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Dashboard Grid -->
+      <div class="dashboard-grid">
+
+        <!-- Progress Section -->
+        <section class="progress-section">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-icon">📊</span>
+              Skill Development Progress
+            </h2>
+          </div>
+
+          <div class="progress-cards">
+
+            <!-- Communication Skills -->
+            <div class="progress-card communication">
+              <div class="progress-header">
+                <div class="progress-icon-wrapper">
+                  <div class="progress-icon">💬</div>
+                </div>
+                <div class="progress-info">
+                  <h4 class="skill-name">Communication Skills</h4>
+                  <p class="progress-status">Improving</p>
+                </div>
+                <div class="progress-percentage">72%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar">
+                  <div class="progress-fill" data-width="72%"></div>
+                </div>
+              </div>
+              <div class="progress-details">
+                <span class="detail-item">Speaking: Good</span>
+                <span class="detail-item">Writing: Excellent</span>
+              </div>
+            </div>
+
+            <!-- Aptitude Skills -->
+            <div class="progress-card aptitude">
+              <div class="progress-header">
+                <div class="progress-icon-wrapper">
+                  <div class="progress-icon">🧠</div>
+                </div>
+                <div class="progress-info">
+                  <h4 class="skill-name">Aptitude Skills</h4>
+                  <p class="progress-status">Excellent</p>
+                </div>
+                <div class="progress-percentage">85%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar">
+                  <div class="progress-fill" data-width="85%"></div>
+                </div>
+              </div>
+              <div class="progress-details">
+                <span class="detail-item">Logical: Strong</span>
+                <span class="detail-item">Numerical: Good</span>
+              </div>
+            </div>
+
+            <!-- Coding Skills -->
+            <div class="progress-card coding">
+              <div class="progress-header">
+                <div class="progress-icon-wrapper">
+                  <div class="progress-icon">💻</div>
+                </div>
+                <div class="progress-info">
+                  <h4 class="skill-name">Coding Skills</h4>
+                  <p class="progress-status">Developing</p>
+                </div>
+                <div class="progress-percentage">68%</div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar">
+                  <div class="progress-fill" data-width="68%"></div>
+                </div>
+              </div>
+              <div class="progress-details">
+                <span class="detail-item">Python: Good</span>
+                <span class="detail-item">DSA: Learning</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Activity Calendar -->
+        <section class="activity-section">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="title-icon">📅</span>
+              Learning Journey
+            </h2>
+            <div class="activity-summary">
+              <span class="summary-text">Last 30 days activity</span>
+            </div>
+          </div>
+
+          <div class="activity-card">
+            <div class="calendar-container">
+              <div class="calendar-grid" id="calendarGrid">
+                <!-- Calendar will be generated by JavaScript -->
+              </div>
+              <div class="calendar-legend">
+                <div class="legend-item">
+                  <span class="legend-dot no-activity"></span>
+                  <span>None</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot low-activity"></span>
+                  <span>Low</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot medium-activity"></span>
+                  <span>Medium</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot high-activity"></span>
+                  <span>High</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="recent-activity">
+              <h4 class="recent-title">Recent Activity</h4>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-content">
+                    <span class="activity-action">Completed Aptitude Test #24</span>
+                    <span class="activity-time">2 hours ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-content">
+                    <span class="activity-action">Practiced Coding Problems</span>
+                    <span class="activity-time">Yesterday</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-dot"></div>
+                  <div class="activity-content">
+                    <span class="activity-action">Viewed Feedback Report</span>
+                    <span class="activity-time">2 days ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo" class="footer-logo-img">
+          <span class="footer-brand">Placement Prep</span>
+        </div>
+        <span class="current-time" id="currentTimeFooter">4:13 AM IST</span>
+      </div>
+
+      <div class="footer-stats">
+        <div class="footer-stat-item">
+          <span class="stat-label">Active Users:</span>
+          <span class="stat-value"><span id="currentlyStudying">1,252</span></span>
+        </div>
+        <div class="footer-stat-item">
+          <span class="stat-label">Success Stories:</span>
+          <span class="stat-value"><span id="studentsPlacedFooter">15,382</span></span>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <div class="user-info">
+          <span class="user-label">Logged in as:</span>
+          <span class="user-value">Dhruv Pathak</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

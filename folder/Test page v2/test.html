@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test - Placement Preparation App</title>
+  <link rel="stylesheet" href="test.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="left-section">
+        <div class="brand-container">
+          <div class="logo-clickable" id="logoHome">
+            <div class="logo">
+              <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo">
+            </div>
+            <span class="brand">Placement Preparation App</span>
+          </div>
+        </div>
+
+        <!-- Navigation Menu with Solid Black Dropdown -->
+        <div class="menu-container">
+          <button id="menuBtn" class="menu-button">
+            <div class="menu-lines">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+            <span class="menu-text">Options</span>
+          </button>
+          <div id="menuDropdown" class="menu-dropdown">
+            <a href="leaderboard.html" class="menu-item">🏆 Leaderboard</a>
+            <a href="profile.html" class="menu-item">👤 Profile</a>
+            <a href="test.html" class="menu-item active">📝 Test</a>
+            <a href="practice.html" class="menu-item">💪 Practice</a>
+            <a href="feedback.html" class="menu-item">💬 Feedback</a>
+            <a href="helpdesk.html" class="menu-item">🆘 Help Desk</a>
+            <a href="about.html" class="menu-item">ℹ️ About</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="datetime-display">
+          <div class="time-display" id="currentTime">3:42 AM</div>
+          <div class="date-display" id="currentDate">Oct 10, 2025</div>
+        </div>
+
+        <div class="test-stats">
+          <div class="stat-item">
+            <span class="stat-label">Tests Taken:</span>
+            <span class="stat-value" id="testsCount">24</span>
+          </div>
+          <div class="stat-divider">•</div>
+          <div class="stat-item">
+            <span class="stat-label">Current Rank:</span>
+            <span class="stat-value" id="currentRank">#42</span>
+          </div>
+        </div>
+
+        <div class="motivational-stats">
+          <div class="stat-item">
+            <span class="active-dot"></span>
+            <span class="stat-text"><span id="activeUsers">1,252</span> currently studying</span>
+          </div>
+          <div class="stat-divider">•</div>
+          <div class="stat-item">
+            <span class="stat-text"><span id="studentsPlaced">15,382</span> students placed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="test-main">
+    <div class="container">
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Test Center</h1>
+          <p class="hero-subtitle">Choose your test type and start improving your placement preparation skills</p>
+        </div>
+      </section>
+
+      <!-- Test Options Section -->
+      <section class="test-options-section">
+
+        <!-- Only For New Users - Initial Test -->
+        <div class="test-card initial-test-card">
+          <div class="test-badge">Only for New Users</div>
+          <div class="test-content">
+            <h3 class="test-title">Attempt Initial Test</h3>
+            <p class="test-description">Take your first assessment to determine your starting level</p>
+            <div class="test-action">
+              <button class="test-btn initial-btn" id="initialTestBtn" data-tooltip="This test is necessary for determining your initial level and the feedback will appear initially on the Ranked Feedback">
+                <span class="btn-icon">🚀</span>
+                <span class="btn-text">Attempt</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ranked Test with Leaderboard -->
+        <div class="test-card ranked-test-card">
+          <div class="test-content">
+            <h3 class="test-title">Ranked Test with Leaderboard Ranking</h3>
+            <p class="test-description">Compete with others and improve your leaderboard position</p>
+            <div class="test-action">
+              <button class="test-btn ranked-btn" id="rankedTestBtn" data-tooltip="This test will determine your leaderboard rankings and will provide you feedback as well">
+                <span class="btn-icon">🏆</span>
+                <span class="btn-text">Attempt</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback Button - Moved to Middle Position -->
+        <div class="test-card feedback-card">
+          <div class="test-content">
+            <h3 class="test-title">View Feedback</h3>
+            <p class="test-description">Check your performance insights and improvement suggestions</p>
+            <div class="test-action">
+              <button class="test-btn feedback-btn" id="feedbackBtn" data-tooltip="Feedbacks are necessary for improvement, do check them after each test">
+                <span class="btn-icon">💬</span>
+                <span class="btn-text">Feedback</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practice Test -->
+        <div class="test-card practice-test-card">
+          <div class="test-content">
+            <h3 class="test-title">Practice Test</h3>
+            <p class="test-description">Understand exam patterns and question types without pressure</p>
+            <div class="test-action">
+              <button class="test-btn practice-btn" id="practiceTestBtn" data-tooltip="This test will help you understand the exam pattern and question type and will provide you feedback as well">
+                <span class="btn-icon">💪</span>
+                <span class="btn-text">Attempt</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Scheduled Tests Section -->
+      <section class="scheduled-tests-section">
+        <div class="section-header">
+          <h2 class="section-title">Upcoming Ranked Scheduled Tests</h2>
+          <p class="section-subtitle">Weekly competitive tests - mark your calendar!</p>
+        </div>
+
+        <div class="scheduled-tests-grid">
+
+          <!-- Test 1 -->
+          <div class="scheduled-test-card">
+            <div class="test-date">
+              <div class="date-day">15</div>
+              <div class="date-month">Oct</div>
+            </div>
+            <div class="test-info">
+              <h4 class="scheduled-test-title">Weekly Aptitude Special Challenge #47</h4>
+              <div class="test-timing">
+                <span class="test-time">🕐 2:00 PM - 3:00 PM IST</span>
+                <span class="test-duration">Duration: 1 hours</span>
+              </div>
+              <div class="test-participants">
+                <span class="participants-count">1,247 registered</span>
+              </div>
+            </div>
+            <div class="test-status">
+              <button class="register-btn">Register</button>
+            </div>
+          </div>
+
+          <!-- Test 2 -->
+          <div class="scheduled-test-card">
+            <div class="test-date">
+              <div class="date-day">22</div>
+              <div class="date-month">Oct</div>
+            </div>
+            <div class="test-info">
+              <h4 class="scheduled-test-title">Coding Marathon #23</h4>
+              <div class="test-timing">
+                <span class="test-time">🕐 10:00 AM - 1:00 PM IST</span>
+                <span class="test-duration">Duration: 3 hours</span>
+              </div>
+              <div class="test-participants">
+                <span class="participants-count">892 registered</span>
+              </div>
+            </div>
+            <div class="test-status">
+              <button class="register-btn">Register</button>
+            </div>
+          </div>
+
+          <!-- Test 3 -->
+          <div class="scheduled-test-card">
+            <div class="test-date">
+              <div class="date-day">29</div>
+              <div class="date-month">Oct</div>
+            </div>
+            <div class="test-info">
+              <h4 class="scheduled-test-title">Communication Skills Assessment Special#15</h4>
+              <div class="test-timing">
+                <span class="test-time">🕐 3:30 PM - 4:00 PM IST</span>
+                <span class="test-duration">Duration: 30 mins</span>
+              </div>
+              <div class="test-participants">
+                <span class="participants-count">1,534 registered</span>
+              </div>
+            </div>
+            <div class="test-status">
+              <button class="register-btn">Register</button>
+            </div>
+          </div>
+
+          <!-- Test 4 -->
+          <div class="scheduled-test-card">
+            <div class="test-date">
+              <div class="date-day">05</div>
+              <div class="date-month">Nov</div>
+            </div>
+            <div class="test-info">
+              <h4 class="scheduled-test-title">Weekly Test #12</h4>
+              <div class="test-timing">
+                <span class="test-time">🕐 11:00 AM - 2:00 PM IST</span>
+                <span class="test-duration">Duration: 3 hours</span>
+              </div>
+              <div class="test-participants">
+                <span class="participants-count">743 registered</span>
+              </div>
+            </div>
+            <div class="test-status">
+              <button class="register-btn">Register</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Quick Stats Section -->
+      <section class="quick-stats-section">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-content">
+              <div class="stat-number" id="totalTests">156</div>
+              <div class="stat-label">Total Tests Available</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-content">
+              <div class="stat-number" id="activeTestTakers">2,847</div>
+              <div class="stat-label">Active Test Takers</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-content">
+              <div class="stat-number" id="averageTime">45m</div>
+              <div class="stat-label">Average Test Time</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-content">
+              <div class="stat-number" id="successRate">87%</div>
+              <div class="stat-label">Student Success Rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Tooltip -->
+  <div id="tooltip" class="tooltip"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-stats">
+        <div class="stat-item">
+          <span class="active-dot"></span>
+          <span class="stat-text"><span id="currentlyStudying">1,252</span> students currently learning</span>
+        </div>
+        <div class="stat-divider">•</div>
+        <div class="stat-item">
+          <span class="stat-text"><span id="studentsPlacedFooter">15,382</span> success stories</span>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Placement Preparation App. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="test.js"></script>
+</body>
+</html>

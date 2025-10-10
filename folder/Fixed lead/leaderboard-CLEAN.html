@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaderboard - Placement Preparation App</title>
+  <link rel="stylesheet" href="leaderboard-CLEAN.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="left-section">
+        <div class="brand-container">
+          <div class="logo-clickable" id="logoHome">
+            <div class="logo">
+              <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo">
+            </div>
+            <span class="brand">Placement Preparation App</span>
+          </div>
+        </div>
+
+        <!-- SIMPLE Menu Button - Just 3 lines -->
+        <div class="menu-container">
+          <button id="menuBtn" class="menu-button">
+            <div class="menu-lines">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+            <span class="menu-text">Options</span>
+          </button>
+          <div id="menuDropdown" class="menu-dropdown">
+            <a href="leaderboard.html" class="menu-item active">🏆 Leaderboard</a>
+            <a href="profile.html" class="menu-item">👤 Profile</a>
+            <a href="test.html" class="menu-item">📝 Test</a>
+            <a href="practice.html" class="menu-item">💪 Practice</a>
+            <a href="feedback.html" class="menu-item">💬 Feedback</a>
+            <a href="helpdesk.html" class="menu-item">🆘 Help Desk</a>
+            <a href="about.html" class="menu-item">ℹ️ About</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="datetime-display">
+          <div class="time-display" id="currentTime">8:22 PM</div>
+          <div class="date-display" id="currentDate">Oct 09, 2025</div>
+        </div>
+
+        <div class="current-rank-display">
+          <span class="rank-label">Current Rank:</span>
+          <span class="rank-number" id="currentUserRank">#42</span>
+        </div>
+
+        <div class="motivational-stats">
+          <div class="stat-item">
+            <span class="active-dot"></span>
+            <span class="stat-text"><span id="activeUsers">1,252</span> active users</span>
+          </div>
+          <div class="stat-divider">•</div>
+          <div class="stat-item">
+            <span class="stat-text"><span id="studentsPlaced">15,382</span> placed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="leaderboard-main">
+    <div class="container">
+
+      <!-- Page Header -->
+      <section class="page-header">
+        <h1 class="page-title">Leaderboard</h1>
+
+        <div class="sort-controls">
+          <label for="sortBy" class="sort-label">Sort by:</label>
+          <div class="sort-dropdown">
+            <select id="sortBy" class="sort-select">
+              <option value="contest_ratings">Contest Ratings</option>
+              <option value="improvement_percentage">Highest Overall Improvement %</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leaderboard Section -->
+      <section class="leaderboard-section">
+        <div class="leaderboard-container">
+          <div class="leaderboard-header">
+            <div class="rank-col">Rank</div>
+            <div class="name-col">Name</div>
+            <div class="score-col" id="scoreHeader">Contest Rating</div>
+            <div class="progress-col">Progress</div>
+          </div>
+
+          <!-- NO DOTS OR SEPARATORS HERE - Direct list -->
+          <div class="leaderboard-list" id="leaderboardList">
+            <!-- User entries will be added here directly by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics -->
+      <section class="stats-section">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-content">
+              <div class="stat-number">2,847</div>
+              <div class="stat-label">Total Participants</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-content">
+              <div class="stat-number">1,456</div>
+              <div class="stat-label">Average Score</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">📈</div>
+            <div class="stat-content">
+              <div class="stat-number">+47%</div>
+              <div class="stat-label">Top Improvement</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-content">
+              <div class="stat-number">892</div>
+              <div class="stat-label">Active This Week</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-stats">
+        <div class="stat-item">
+          <span class="active-dot"></span>
+          <span class="stat-text">1,252 students currently learning</span>
+        </div>
+        <div class="stat-divider">•</div>
+        <div class="stat-item">
+          <span class="stat-text">15,382 success stories</span>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Placement Preparation App. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="leaderboard-CLEAN.js"></script>
+</body>
+</html>

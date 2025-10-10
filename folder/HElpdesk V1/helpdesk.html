@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help Desk - Placement Preparation App</title>
+  <link rel="stylesheet" href="helpdesk.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="left-section">
+        <div class="brand-container">
+          <div class="logo-clickable" id="logoHome">
+            <div class="logo">
+              <img src="WhatsApp_Image_2025-10-08_at_16.36.07-removebg-preview.png" alt="Logo">
+            </div>
+            <span class="brand">Placement Preparation App</span>
+          </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="menu-container">
+          <button id="menuBtn" class="menu-button">
+            <div class="menu-lines">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+            <span class="menu-text">Options</span>
+          </button>
+          <div id="menuDropdown" class="menu-dropdown">
+            <a href="leaderboard.html" class="menu-item">🏆 Leaderboard</a>
+            <a href="profile.html" class="menu-item">👤 Profile</a>
+            <a href="test.html" class="menu-item">📝 Test</a>
+            <a href="practice.html" class="menu-item">💪 Practice</a>
+            <a href="feedback.html" class="menu-item">💬 Feedback</a>
+            <a href="helpdesk.html" class="menu-item active">🆘 Help Desk</a>
+            <a href="about.html" class="menu-item">ℹ️ About</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <div class="datetime-display">
+          <div class="time-display" id="currentTime">8:47 PM</div>
+          <div class="date-display" id="currentDate">Oct 09, 2025</div>
+        </div>
+
+        <div class="motivational-stats">
+          <div class="stat-item">
+            <span class="active-dot"></span>
+            <span class="stat-text"><span id="activeUsers">1,252</span> active users</span>
+          </div>
+          <div class="stat-divider">•</div>
+          <div class="stat-item">
+            <span class="stat-text"><span id="studentsHelped">15,382</span> placed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="helpdesk-main">
+    <div class="container">
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Help Desk</h1>
+          <p class="hero-subtitle">We're here to help you succeed! Get support, find answers, or reach out to our team.</p>
+        </div>
+
+        <!-- Contact Buttons -->
+        <div class="contact-buttons">
+          <button id="emailBtn" class="contact-btn email-btn">
+            <div class="contact-icon">📧</div>
+            <div class="contact-info">
+              <span class="contact-title">Email Support</span>
+              <span class="contact-subtitle">Get help via email</span>
+            </div>
+          </button>
+
+          <button id="whatsappBtn" class="contact-btn whatsapp-btn">
+            <div class="contact-icon">💬</div>
+            <div class="contact-info">
+              <span class="contact-title">WhatsApp Support</span>
+              <span class="contact-subtitle">Chat with us instantly</span>
+            </div>
+          </button>
+
+          <button id="contactBtn" class="contact-btn contact-btn-general">
+            <div class="contact-icon">📞</div>
+            <div class="contact-info">
+              <span class="contact-title">Contact Us</span>
+              <span class="contact-subtitle">Multiple ways to reach us</span>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <div class="faq-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Quick answers to common questions</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question" data-faq="1">
+              <span class="faq-text">How do I access my test results and performance analytics?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" id="faq-1">
+              <p>You can view your detailed test results by navigating to your Profile page. There you'll find:</p>
+              <ul>
+                <li>Overall performance statistics and trends</li>
+                <li>Subject-wise breakdown of your scores</li>
+                <li>Progress tracking over time</li>
+                <li>Comparison with other users</li>
+                <li>Detailed analytics for each test attempt</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="2">
+              <span class="faq-text">How is my ranking calculated on the leaderboard?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" id="faq-2">
+              <p>Your leaderboard ranking is calculated based on multiple factors:</p>
+              <ul>
+                <li><strong>Contest Rating:</strong> Your overall performance score across all tests</li>
+                <li><strong>Improvement Rate:</strong> How much you've improved over time</li>
+                <li><strong>Consistency:</strong> Regular participation and stable performance</li>
+                <li><strong>Difficulty Level:</strong> Performance on harder questions carries more weight</li>
+                <li>Rankings are updated in real-time after each test completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="3">
+              <span class="faq-text">What types of tests and practice sessions are available?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" id="faq-3">
+              <p>We offer a comprehensive range of preparation materials:</p>
+              <ul>
+                <li><strong>Mock Tests:</strong> Full-length placement exam simulations</li>
+                <li><strong>Topic-wise Tests:</strong> Focused tests for specific subjects</li>
+                <li><strong>Speed Tests:</strong> Quick assessments for time management</li>
+                <li><strong>Practice Sessions:</strong> Unlimited practice with instant feedback</li>
+                <li><strong>Previous Year Papers:</strong> Real placement test questions from top companies</li>
+                <li><strong>Adaptive Tests:</strong> Questions that adjust to your skill level</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="4">
+              <span class="faq-text">How can I track my study progress and set goals?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" id="faq-4">
+              <p>Our platform provides comprehensive progress tracking tools:</p>
+              <ul>
+                <li>Daily, weekly, and monthly study streaks</li>
+                <li>Subject-wise progress charts and analytics</li>
+                <li>Personal goal setting with deadline reminders</li>
+                <li>Achievement badges for reaching milestones</li>
+                <li>Study time tracking and recommendations</li>
+                <li>Performance comparison with your past attempts</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="5">
+              <span class="faq-text">What should I do if I encounter technical issues?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" id="faq-5">
+              <p>If you experience any technical problems, try these steps:</p>
+              <ul>
+                <li><strong>First:</strong> Refresh the page and clear your browser cache</li>
+                <li><strong>Check:</strong> Ensure you have a stable internet connection</li>
+                <li><strong>Browser:</strong> Use the latest version of Chrome, Firefox, or Safari</li>
+                <li><strong>Contact:</strong> Reach out via WhatsApp or Email for immediate assistance</li>
+                <li>Our technical support team responds within 30 minutes during business hours</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="6">
+              <span class="faq-text">How do I provide feedback or suggest improvements?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" id="faq-6">
+              <p>We value your input and have multiple channels for feedback:</p>
+              <ul>
+                <li>Use the <strong>Feedback</strong> page to submit detailed suggestions</li>
+                <li>Rate individual tests and practice sessions</li>
+                <li>Join our community forums for discussions</li>
+                <li>Contact us directly via email with improvement ideas</li>
+                <li>Participate in our monthly user surveys</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="7">
+              <span class="faq-text">Is there a mobile app available for practice on-the-go?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" id="faq-7">
+              <p>Yes! Our platform is fully optimized for mobile devices:</p>
+              <ul>
+                <li>Responsive web app that works on all mobile browsers</li>
+                <li>Progressive Web App (PWA) features for offline access</li>
+                <li>Touch-optimized interface for easy navigation</li>
+                <li>Synced progress across all your devices</li>
+                <li>Native mobile apps coming soon for iOS and Android</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" data-faq="8">
+              <span class="faq-text">How do I reset my password or update my profile information?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer" id="faq-8">
+              <p>Managing your account is simple and secure:</p>
+              <ul>
+                <li><strong>Password Reset:</strong> Use the "Forgot Password" link on the login page</li>
+                <li><strong>Profile Update:</strong> Visit your Profile page to edit personal information</li>
+                <li><strong>Email Change:</strong> Contact support for email address updates</li>
+                <li><strong>Account Security:</strong> Enable two-factor authentication for added security</li>
+                <li>All changes are saved automatically and synced across devices</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Help Section -->
+      <section class="quick-help-section">
+        <div class="help-grid">
+          <div class="help-card">
+            <div class="help-icon">🚀</div>
+            <h3 class="help-title">Getting Started</h3>
+            <p class="help-description">New to our platform? Check out our quick start guide and tutorials.</p>
+            <button class="help-btn" onclick="alert('Getting Started guide will be available soon!')">Learn More</button>
+          </div>
+
+          <div class="help-card">
+            <div class="help-icon">📊</div>
+            <h3 class="help-title">Study Tips</h3>
+            <p class="help-description">Expert advice on how to maximize your preparation and improve scores.</p>
+            <button class="help-btn" onclick="alert('Study tips section coming soon!')">View Tips</button>
+          </div>
+
+          <div class="help-card">
+            <div class="help-icon">🎯</div>
+            <h3 class="help-title">Goal Setting</h3>
+            <p class="help-description">Learn how to set achievable goals and track your progress effectively.</p>
+            <button class="help-btn" onclick="alert('Goal setting guide coming soon!')">Set Goals</button>
+          </div>
+
+          <div class="help-card">
+            <div class="help-icon">💡</div>
+            <h3 class="help-title">Best Practices</h3>
+            <p class="help-description">Discover proven strategies from successful students and experts.</p>
+            <button class="help-btn" onclick="alert('Best practices guide coming soon!')">Explore</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-stats">
+        <div class="stat-item">
+          <span class="active-dot"></span>
+          <span class="stat-text"><span id="currentlyStudying">1,252</span> students currently learning</span>
+        </div>
+        <div class="stat-divider">•</div>
+        <div class="stat-item">
+          <span class="stat-text"><span id="studentsPlacedFooter">15,382</span> success stories</span>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Placement Preparation App. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="helpdesk.js"></script>
+</body>
+</html>
